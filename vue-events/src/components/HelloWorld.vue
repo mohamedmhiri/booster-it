@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1 v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">{{ msg }}</h1>
-    <button v-on:click="onClick">clickMe</button>
+    <h1 @mouseover="mouseover" @mouseleave="mouseleave">{{ msg }}</h1>
+    <button @click="onClick">clickMe</button>
     <input type="text" v-on:keydown="keydown">
   </div>
 </template>

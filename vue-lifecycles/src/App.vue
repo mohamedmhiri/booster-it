@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- Before Create -->
-    <before-create v-if="showBeforeCreateComponent"></before-create>
+    <before-create v-show="showBeforeCreateComponent"></before-create>
     <button @click="toggleComponent('BeforeCreate')">
       {{ buttonLabel('BeforeCreate') }}
     </button>

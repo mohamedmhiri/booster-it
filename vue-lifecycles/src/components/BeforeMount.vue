@@ -7,9 +7,11 @@
 <script>
 export default {
     beforeMount() {
-        this.$refs["title"].addEventListener("mouseenter", () => {
-            this.$refs["title"].classList = "green";
-        });
+        setTimeout(() => {
+            this.$refs["title"].addEventListener("mouseenter", () => {
+                this.$refs["title"].classList = "green";
+            });
+        }, 1000);
     },
 }
 </script>

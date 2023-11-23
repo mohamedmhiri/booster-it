@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <DataList />
   </div>
 </template>
@@ -10,6 +9,14 @@ import DataList from './components/DataList'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      userList: []
+    }
+  },
+  beforeMount() {
+    this.userList = ["Anne", "Clément", "Massi", "Raphael", "Nicolas", "Mathhieu"];
+  },
   components: {
     DataList
   }
