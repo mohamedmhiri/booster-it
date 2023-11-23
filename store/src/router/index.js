@@ -9,6 +9,7 @@ import Cart from "../views/Cart.vue";
 Vue.use(Router)
 
 function isAuthenticated(to, from, next) {
+  console.log(to);
   if (!localStorage.getItem("user")) {
     next({
       path: '/login'
@@ -18,6 +19,7 @@ function isAuthenticated(to, from, next) {
 }
 
 export default new Router({
+  mode: "history",
   routes: [
     {
       path: '/',

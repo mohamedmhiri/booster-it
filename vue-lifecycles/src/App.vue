@@ -1,62 +1,62 @@
 <template>
   <div id="app">
     <!-- Before Create -->
-    <before-create v-show="showBeforeCreateComponent"></before-create>
+    <before-create v-if="showBeforeCreateComponent"></before-create>
     <button @click="toggleComponent('BeforeCreate')">
       {{ buttonLabel('BeforeCreate') }}
     </button>
     <br>
     <!-- End Before Create -->
     <!-- Created -->
-    <created v-if="showCreatedComponent"></created>
+    <!-- <created v-if="showCreatedComponent"></created>
     <button @click="toggleComponent('Created')">
       {{ buttonLabel('Created') }}
     </button>
-    <br>
+    <br> -->
     <!-- End Created -->
     <!-- Before Mount -->
-    <before-mount v-if="showBeforeMountComponent"></before-mount>
+    <!-- <before-mount v-if="showBeforeMountComponent"></before-mount>
     <button @click="toggleComponent('BeforeMount')">
       {{ buttonLabel('BeforeMount') }}
     </button>
-    <br>
+    <br> -->
     <!-- End Before Mount -->
     <!-- Mounted -->
-    <mounted v-if="showMountedComponent"></mounted>
+    <!-- <mounted v-if="showMountedComponent"></mounted>
     <button @click="toggleComponent('Mounted')">
       {{ buttonLabel('Mounted') }}
     </button>
-    <br>
+    <br> -->
     <!-- End Mounted -->
     <!-- Before Update -->
-    <before-update v-if="showBeforeUpdateComponent"></before-update>
+    <!-- <before-update v-if="showBeforeUpdateComponent"></before-update>
     <ul ref="list">
     </ul>
     <button @click="toggleComponent('BeforeUpdate')">
       {{ buttonLabel('BeforeUpdate') }}
     </button>
-    <br>
+    <br> -->
     <!-- End Before Update -->
     <!-- Updated -->
-    <updated v-if="showUpdatedComponent"></updated>
+    <!-- <updated v-if="showUpdatedComponent"></updated>
     <button @click="toggleComponent('Updated')">
       {{ buttonLabel('Updated') }}
     </button>
-    <br>
+    <br> -->
     <!-- End Updated -->
     <!-- Before Unmount -->
-    <before-unmount v-if="showBeforeUnmountComponent"></before-unmount>
+    <!-- <before-unmount v-if="showBeforeUnmountComponent"></before-unmount>
     <button @click="toggleComponent('BeforeUnmount')">
       {{ buttonLabel('BeforeUnmount') }}
     </button>
-    <br>
+    <br> -->
     <!-- End Before Unmount -->
     <!-- Unmounted -->
-    <unmounted v-if="showUnmountedComponent"></unmounted>
+    <!-- <unmounted v-if="showUnmountedComponent"></unmounted>
     <button @click="toggleComponent('Unmounted')">
       {{ buttonLabel('Unmounted') }}
     </button>
-    <br>
+    <br> -->
     <!-- End Unmounted -->
   </div>
 </template>
@@ -94,6 +94,10 @@ export default {
       showBeforeUnmountComponent: false,
       showUnmountedComponent: false,
     }
+  },
+  mounted() {
+    const section = document.querySelector("section")
+    section.style.backgroundColor = "yellow";
   },
   beforeUpdate() {
     console.log("beforeUpdate: This happened just before the 'updated' hook.");
