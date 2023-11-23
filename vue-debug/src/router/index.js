@@ -18,7 +18,7 @@ export default new Router({
       }
     },
     {
-      path: '/about',
+      path: '/ab0ut',
       name: 'About',
       component: About,
       meta: {
